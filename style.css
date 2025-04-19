@@ -36,7 +36,7 @@ h2 {
   margin: 12px;
   background-color: #e9e9ce;
   text-align: right;
-  border: solid 2px;
+  border: solid 2px #3d3c3c;
   border-radius: 8px;
   display: flex;
   justify-content: right;
@@ -56,9 +56,9 @@ h2 {
   width: 20%;
   height: 36px;
   margin: auto 0px;
+  border: 2px solid #3d3c3c;
   border-radius: 8px;
   background-color: #dadad2b2;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .calculator-row > button:active {
