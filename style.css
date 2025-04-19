@@ -64,8 +64,8 @@ h2 {
 }
 
 .calculator-row > button:active {
-  transform: scale(0.97); /* Makes it shrink a bit */
-  background-color: #ccc; /* Optional: change background */
+  transform: scale(0.97);
+  background-color: #cccccc80;
 }
 
 .calculator-row > button.operator {
