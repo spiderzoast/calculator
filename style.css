@@ -27,12 +27,12 @@ h2 {
 }
 
 .calculator-container > div {
-  padding: 12px;
   width: auto;
 }
 
 .calculator-display {
-  font-size: 20px;
+  font-size: 36px;
+  padding: 12px;
   margin: 12px;
   background-color: #e9e9ce;
   text-align: right;
@@ -45,16 +45,18 @@ h2 {
 }
 
 .calculator-row {
+  padding: 0px 12px;
   display: flex;
   justify-content: space-around;
   gap: 12px;
+  margin: 12px 0;
 }
 
 .calculator-row > button {
-  font-size: 20px;
+  font-size: 28px;
   flex: 1 0 auto;
   width: 20%;
-  height: 36px;
+  height: 48px;
   margin: auto 0px;
   border: 2px solid #3d3c3c;
   border-radius: 8px;
