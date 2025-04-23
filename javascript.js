@@ -2,34 +2,42 @@ let num1;
 let num2;
 let operator;
 
-function add(a, b) {
-  return a + b;
-};
+const display = document.querySelector(".calculator-display p");
 
-function subtract(a, b) {
-  return a - b;
-};
+document.querySelectorAll('.calculator-row button').forEach(button => {
+  button.addEventListener('click', () => {
+    const input = button.value || button.textContent;
+    if (input === "=") {
+      const arr = display.textContent.match(/([0-9.]+)([+\-×/])([0-9.]+)/);
+      num1 = Number(arr[1]);
+      operator = arr[2];
+      num2 = Number(arr[3]);
+      display.textContent = operate(operator, num1, num2);
+    } else if (input === "C") {
+      display.textContent = "0";
+    } else if (display.textContent === "0") {
+      display.textContent = input;
+    } else {
+      display.textContent += input; 
+    };
+  });
+});
 
-function multiply(a, b) {
-  return a * b;
-};
-
-function divide(a, b) {
-  return a / b;
-};
-
-function operate(operator, a, b) {
+function operate(operator, num1, num2) {
   switch (operator) {
     case '+':
-      return add(a, b);
+      return num1 + num2;
     case '-':
-      return subtract(a, b);
+      return num1 - num2;
     case '*':
-      return multiply(a, b);
+      return num1 * num2;
     case '/':
-      return divide(a, b);
+      if (num2 === 0){
+        return "Error";
+      } else
+      return num1 / num2;
     default:
-      return "Invalid operator";
+      return "Error";
   }
 }
 
