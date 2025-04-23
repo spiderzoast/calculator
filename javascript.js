@@ -40,7 +40,7 @@ function operate(operator, num1, num2) {
     case '×':
       return Math.round(num1 * num2);
     case '/':
-      if (num2 === 0){
+      if (num2 === 0) {
         return "Cannot divide by 0";
       } else
       return Math.round(num1 / num2);
