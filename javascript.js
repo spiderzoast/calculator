@@ -41,7 +41,7 @@ function operate(operator, num1, num2) {
       return num1 * num2;
     case '/':
       if (num2 === 0){
-        return "Error";
+        return "Cannot divide by 0";
       } else
       return num1 / num2;
     default:
